@@ -157,11 +157,6 @@ paths:
       - question-controller
       operationId: findAll_1
       parameters:
-      - name: text
-        in: query
-        required: false
-        schema:
-          type: string
       - name: pageable
         in: query
         required: true
@@ -235,7 +230,7 @@ paths:
         "200":
           description: OK
           content:
-            application/json:
+            '*/*':
               schema:
                 type: array
                 items:
@@ -256,7 +251,7 @@ paths:
         "200":
           description: OK
           content:
-            application/json:
+            '*/*':
               schema:
                 $ref: '#/components/schemas/Quiz'
 components:
